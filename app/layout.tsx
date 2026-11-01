@@ -15,8 +15,10 @@ const geistMono = Geist_Mono({
 const inter = Inter({
   variable: "--font-inter",
   subsets: ['latin'],
-  weight: "variable"
+  weight: "variable",
 })
+
+
 
 export const metadata: Metadata = {
   title: "Team Uninterrupted Exception",
@@ -29,6 +31,14 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} h-full antialiased`}
     >
+    <head>
+      <link
+          rel="icon"
+          href="/logo.svg"
+          type="image/svg+xml"
+          sizes="<generated>"
+      />
+    </head>
       <body className="min-h-full flex flex-col font-inter">{children}</body>
     </html>
   );
